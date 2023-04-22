@@ -12,7 +12,7 @@ Bene, ora è il momento di collegare il vostro account con una chiave SSH.
 
 Adesso occorre generare la chiave SSH. Attenzione, la chiave privata non deve essere data a nessuno per nessun motivo
 Aprire il terminale UBUNTU e lanciare il seguente comando:
-> ssh-keygen
+> ssh-keygen -o -t rsa -C “nome.cognome@iiseinaudiscarpa.edu.it”
 
 Attenzione, se SSH non è un comando riconosciuto occorre installarlo tramite il seguente comando:
 > sudo apt install ssh
@@ -31,7 +31,7 @@ Aprire la cartella SSH per copiare le chiavi generate.
 
 ![ssh](https://user-images.githubusercontent.com/123731204/233330103-e53ef957-f58c-4a35-b270-4312a4f74b8b.png)
 
-- 5 - Copiare i 2 files contenuti nella cartella
+- 5 - Copiare i 2 files contenuti nella cartella e portateli con voi sempre
 > ATTENZIONE: il file .pub è pubblico e può essere condiviso, **l'altra chiave è strettamente privata**. Salvatela su una chiavetta ed abbiatene cura.
 
 ### Associare la chiave al vostro account.
@@ -49,14 +49,6 @@ Incollare la chiave PUBBLICA (più corta), darle un nome e salvare.
 
 provate a clonare il vostro primo repository con il seguente comando:
 
-> git clone git@github.com:Einaudi-Montebelluna/2022-23_3Cinf_Informatica_ProgettoBiblioteca.git
+> $ ssh -T git@github.com
 
-Attenzione. Nel caso sia presente il seguente errore:
-
-> ssh: connect to host github.com port 22: Connection refused
-
-Occorre modificare la porta di uscita con il seguente comando:
-
->  sudo gedit /etc/ssh/sshd_config
-
-Decommentare #Port 22 e sostituire con Port 443
+Attenzione. Nel caso sia presente un errore riportatelo nei commenti
