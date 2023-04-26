@@ -12,7 +12,29 @@ In questo repository terremo il materiale per il primo utilizzo di git.
 
 Una volta letta l'introduzione ricordati di iscriverti con un nuovo profilo se non ce l'hai già :wink:
 
-### Fatto??
+Per i minorenni: **Ricordatevi di chidere l'autorizzazione ai vostri genitori per iscrivervi**
+
+Fatto?? Se hai già installato UBUNTU (o altra distribuzione linux) con git e ssh installati prosegui allo step di creazione del tunnel SSH.
+
+## Installazione LINUX:
+Potete trovare ovunque informazioni dettagliate su come installare ubuntu. Nel nostro corso utilizzaremo UBUNTU 20, preinstallato sulle nostre macchine virtuali vmWare (ambiente windows). Se non riuscite a creare un SO su macchina virtuale a casa allora potete provedere con delle alternative:
+ - Installare il SO in versione portable su una chiavetta USB tramite il software [Linux Live USB Creator](https://www.linuxliveusb.com/)
+ > NOTA: per far partire il SO da USB occorre avere accesso al bios ed attivare il boot da USB in via prioritaria rispetto al disco
+ - [Installare il SO in dual boot](https://turbolab.it/dual-boot-778/come-installare-ubuntu-20.04-fianco-windows-10-guida-definitiva-dual-boot-video-81)
+
+## Installazione SSH
+
+Attenzione, se SSH non è un comando riconosciuto occorre installarlo tramite il seguente comando:
+> sudo apt install ssh
+
+Premere invio 3 volte
+
+![Cattura](https://user-images.githubusercontent.com/123731204/233328150-e0b583fe-fddc-400e-915b-f7be529911d5.PNG)
+
+## Installazione GIT
+
+Attenzione, se git non è un comando riconosciuto occorre installarlo tramite il seguente comando:
+> sudo apt install git
 
 ## Tunnel SSH
 
@@ -22,13 +44,6 @@ Bene, ora è il momento di collegare il vostro account con una chiave SSH.
 Adesso occorre generare la chiave SSH. Attenzione, la chiave privata non deve essere data a nessuno per nessun motivo
 Aprire il terminale UBUNTU e lanciare il seguente comando:
 > ssh-keygen -o -t rsa -C “nome.cognome@iiseinaudiscarpa.edu.it”
-
-Attenzione, se SSH non è un comando riconosciuto occorre installarlo tramite il seguente comando:
-> sudo apt install ssh
-
-Premere invio 3 volte
-
-![Cattura](https://user-images.githubusercontent.com/123731204/233328150-e0b583fe-fddc-400e-915b-f7be529911d5.PNG)
 
 Ora la chiave è stata generata.
 Aprire la cartella SSH per copiare le chiavi generate.
