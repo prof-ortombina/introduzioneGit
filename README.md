@@ -75,4 +75,5 @@ provate a clonare il vostro primo repository con il seguente comando:
 
 > $ ssh -T git@github.com
 
-Attenzione. Nel caso sia presente un errore lo vediamo in classe
+FIRMA:
+Ivan Ortombina
