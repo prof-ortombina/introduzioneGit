@@ -105,7 +105,7 @@ Per vedere sia i branch tracciati su remoto che i branch locali esegui il comand
 
 >git branch -a
 
-Ci sarà un asterisco (*) a fianco del branch sul quale ti trovi attualmente.
+Ci sarà un asterisco (*) a fianco del branch sul quale ti trovi attualmente. Attenzione: i branch remoti saranno visibili solo a seguito dell'allineamento con il remoto, che avviene attraverso il comando **pull**
 
 ### Passare da un branch a un altro
 
@@ -138,7 +138,7 @@ Git non ti consente di eliminare il branch sul quale ti trovi attualmente. Prima
 
 Puoi confrontare dei branch con il comando git diff:
 
-> git diff PRIMO-BRANCH..SECONDO-BRANCH
+> git diff PRIMO-BRANCH SECONDO-BRANCH
 
 Vedrai un risultato con testo colorato per evidenziare le modifiche tra i branch. Per tutte le righe modificate, la versione SECONDO-BRANCH avrà una riga verde che inizia con un  ”+”, e la versione PRIMO-BRANCH avrà una riga rossa che inizia con un  ”-“. Se non vuoi che Git visualizzi due righe per ogni modifica, puoi usare l'opzione --color-words (colora parole), nel qual caso Git mostrerà una riga con il testo eliminato in rosso e il testo aggiunto in verde.
 
@@ -164,6 +164,22 @@ Il comando git add aggiunge una modifica presente nella working directory alla s
 
 > git add NOME_FILE
 
+## Comando git switch
+
+Come abbiamo visto nella sezione "Git Branch" è possibile visualizzare il branch remoto con il seguente comando:
+
+> git branch -r
+
+Visualizza i branch presenti in remoto. Oppure:
+
+> git branch -a
+
+Visualizza sia i branch remoti che i branch locali
+
+Se un branch non si trova in locale ma solo in remoto (ad esempio se ho appena clonato il repository) esiste un comando che permette di clonare un repository direttamente da remoto:
+
+> git switch NOME_BRANCH
+
 ## Il commit
 
 Il comando git commit fissa nella history del progetto uno snapshot dello stato attuale, ovvero una versione “sicura” o “rilevante” del progetto stesso. Le modifiche incluse nel salvataggio sono quelle che sono state esplicitamente incluse nella staging area tramite il comando git add.
@@ -185,7 +201,6 @@ la combinazione dei due precedenti
 >git commit --author="Jane Doe <jade.doe@example.com>"
 
 permette di indicare l’autore delle modifiche, distinguendo tra autore (Jane Doe) ed esecutore del commit (il propio user.name e user.email)
-
 
 
 BIBLIOGRAFIA/SITOGRAFIA:
